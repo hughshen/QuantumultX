@@ -2109,7 +2109,7 @@ function VL2QX(subs, Pudp, Ptfo, Pcert0, PTls13) {
   } else if(cnt.indexOf("type=")!=-1 && cnt.indexOf("type=tcp")==-1) {//暂不支持类型
     type="NS"
   }
-if(obfs=="obfs=wss" && obfs=="obfs=over-tls"){
+if(obfs=="obfs=wss" || obfs=="obfs=over-tls"){
   ptls13 = PTls13 == 1 ? "tls13=true" : "tls13=false"
   if (Pcert0 == 0) { 
     pcert = "tls-verification=false" 
